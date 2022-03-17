@@ -9,7 +9,7 @@ export const SingleMovieDetails = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://movie-fake-server.herokuapp.com/data/${productId}`,
+      url: `https://movie-fake-server.herokuapp.com/data/${productId}`
     })
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
@@ -18,15 +18,14 @@ export const SingleMovieDetails = () => {
   // make a request to get the details
   return (
     <>
-      <h2>Single Product Page</h2>
-      {data && (
-        <>
-          <h2>{data.movie_name}</h2>
-          <img src={data.image_url}></img>
-          {data.release_date}
-          {data.rating}
-        </>
-      )}
+         <h1>SinglePage</h1>
+         {data && <> <h2>{data.movie_name}</h2>
+               <img src= {data.image_url}/>
+         
+               <h3> {data.release_date} </h3>
+               <h3> {data.rating} </h3>
+               <h3> {data.genre} </h3>
+         </>}
     </>
-  );
-};
+    )
+  }
