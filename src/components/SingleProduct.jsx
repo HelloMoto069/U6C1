@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export const SingleMovieDetails = () => {
+export const SingleProductList = () => {
   const { productId } = useParams();
   const [data, setData] = useState(null);
 
@@ -13,19 +13,20 @@ export const SingleMovieDetails = () => {
     })
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
+      console.log(data)
   }, [productId]);
 
   // make a request to get the details
   return (
     <>
          <h1>SinglePage</h1>
-         {data && <> <h2>{data.movie_name}</h2>
-               <img src= {data.image_url}/>
+         {data && <> <h2>{data.title}</h2>
+               <img src= {data.image}/>
          
-               <h3> {data.release_date} </h3>
-               <h3> {data.rating} </h3>
-               <h3> {data.genre} </h3>
+               <h3> {data.brand} </h3>
+               <h3> {data.price} </h3>
          </>}
     </>
     )
   }
+

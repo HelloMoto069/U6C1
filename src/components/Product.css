@@ -1,6 +1,5 @@
-.movies-list{
+.products-list{
     display:grid;
     grid-gap:5px;
     grid-template-columns: auto auto auto;
 }
-

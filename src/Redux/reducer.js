@@ -1,8 +1,7 @@
 
 
 const initState = {
-    data:[],
-    filterData:[],
+    products:[],
     isLoading:false,
     isError:false
 }

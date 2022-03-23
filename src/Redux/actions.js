@@ -1,6 +1,21 @@
-// thunk call to fetch movie list
-const getMovieData = () => ({});
+import axios from "axios";
 
-// action object for filter  feature
+// action for get products request
+const getProductsReq = () => ({});
 
-const filterByGenre = () => ({});
+// action for get products success
+
+const getProductsSuccess = () => ({});
+
+// action for get products failure
+
+const getProductsFailure = () => ({});
+
+// thunk call to fetch products  list
+const getproductsData = (data) => ({
+ 
+    })
+
+// action object for sort  feature
+
+const sortProducts = () => ({});
