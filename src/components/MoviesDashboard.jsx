@@ -19,7 +19,7 @@ export const MoviesDashboard = () => {
     setLoading(true);
     axios({
       method: "get",
-      url: "https://movie-fake-server.herokuapp.com/data",
+      url: "https://movie-fake-server.herokuapp.com/products",
     })
       .then((res) => setData(res.data))
       .catch((err) => console.log(err))

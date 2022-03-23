@@ -9,7 +9,7 @@ export const SingleMovieDetails = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://movie-fake-server.herokuapp.com/data/${productId}`
+      url: `https://movie-fake-server.herokuapp.com/products/${productId}`
     })
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
